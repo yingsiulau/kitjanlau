@@ -1,0 +1,20 @@
+<div class="navbar">
+  <div class="left">
+    <ng-container *ngIf="showName">
+      <div class="link" routerLink="/aboutme">
+        <h3>Kitjan Lau</h3>
+      </div>
+    </ng-container>
+  </div>
+  <div class="right">
+    <div class="link" routerLink="/contact" routerLinkActive="active">
+      Contact
+    </div>
+    <div class="link" routerLink="/projects" routerLinkActive="active">
+      Projects
+    </div>
+    <div class="link" routerLink="/aboutme" routerLinkActive="active">
+      About Me
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.left {
+  h3 {
+    margin: 0;
+    margin-left: 20px;
+  }
+}
+
+.right {
+  margin-right: 10px;
+
+  > div {
+    float: right;
+    padding: 10px;
+  }
+}
+
+.link {
+  cursor: pointer;
+}

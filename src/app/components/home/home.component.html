@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="column">
+      <div>short description about my sister</div>
+    </div>
+    <div class="column">
+      <app-canvas-box></app-canvas-box>
+    </div>
+  </div>
+  <div class="carousel">
+    <div class="arrow">
+      <button mat-icon-button (click)="scroll(-1)"><</button>
+    </div>
+
+    <div class="container" id="container">
+      <div class="item" id="1">
+        <img src="assets/images/bluescreen.png" />
+        <div class="description">
+          <h2>hello</h2>
+          <p>description</p>
+          <button mat-raised-button>See more</button>
+        </div>
+      </div>
+      <div class="item" id="2">
+        <img src="assets/images/bluescreen.png" />
+        <div class="description">
+          <h2>hello2</h2>
+          <p>description</p>
+          <button mat-raised-button>See more</button>
+        </div>
+      </div>
+      <div class="item" id="3">
+        <img src="assets/images/bluescreen.png" />
+        <div class="description">
+          <h2>hello3</h2>
+          <p>description</p>
+          <button mat-raised-button>See more</button>
+        </div>
+      </div>
+      <div class="item" id="4">
+        <img src="assets/images/bluescreen.png" />
+        <div class="description">
+          <h2>hello4</h2>
+          <p>description</p>
+          <button mat-raised-button>See more</button>
+        </div>
+      </div>
+      <div class="item" id="5">
+        <img src="assets/images/bluescreen.png" />
+        <div class="description">
+          <h2>hello5</h2>
+          <p>description</p>
+          <button mat-raised-button>See more</button>
+        </div>
+      </div>
+    </div>
+    <div class="arrow">
+      <button mat-icon-button (click)="scroll(1)">></button>
+    </div>
+  </div>
+</div>
