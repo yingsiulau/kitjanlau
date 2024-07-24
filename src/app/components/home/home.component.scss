@@ -1,5 +1,5 @@
 .wrapper {
-  margin: 0 10vw;
+  margin: 30px 10vw;
 }
 
 .row {
@@ -10,6 +10,8 @@
 
 .column {
   flex: 50%;
+  height: 70vh;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -17,46 +19,59 @@
   width: 100%;
   white-space: nowrap; /* Prevents the items from wrapping to the next line */
 }
-
-.item {
-  border: 10px solid white;
-  border-collapse: collapse;
-  display: inline-block; /* Makes each item take up only the space it needs */
-  width: calc(100% / 3 - 20px);
-  min-width: 300px;
-  position: relative;
-  border-radius: 15px;
-  background-color: aliceblue;
-
-  .description {
-    color: white;
-    position: absolute;
-    bottom: 24px;
-    left: 24px;
-  }
-
-  img {
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(50%);
-  }
-}
-
-.carousel {
-  display: flex;
-  align-items: center;
-}
-
-.first {
-  margin-left: 0px;
-}
-
-.last {
-  margin-right: 0px;
-}
+  
 
 .mat-mdc-raised-button {
   border-radius: 25px !important;
+}
+
+iframe:focus {
+  outline: none;
+}
+
+iframe[seamless] {
+  display: block;
+}
+
+.video-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between the videos */
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 18%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  flex: 1 1 calc(25% - 20px); /* Four videos per row with gap */
+  max-width: calc(25% - 20px); /* Ensure the width does not exceed 25% minus the gap */
+  background: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: -40%;
+  left: -35%;
+  width: 175%;
+  height: 175%;
+  filter: brightness(60%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+
+
+
+.description {
+  font-size: 1em;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  color: white;
+}
+
+
+#recent-projects{
+  text-align: center;
 }

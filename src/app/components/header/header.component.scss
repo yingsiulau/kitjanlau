@@ -1,8 +1,11 @@
 .navbar {
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 70px;
   justify-content: space-between;
+  margin: 0px 10vw;
+  background-color: darkred;
+  color: white;
 }
 
 .left {
