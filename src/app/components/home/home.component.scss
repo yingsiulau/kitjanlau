@@ -2,14 +2,7 @@
   margin: 30px 10vw;
 }
 
-.row {
-  display: flex;
-  width: calc(100% - 116px);
-  margin-left: 58px;
-}
-
-.column {
-  flex: 50%;
+.player {
   height: 70vh;
   margin-bottom: 20px;
 }
@@ -19,7 +12,6 @@
   width: 100%;
   white-space: nowrap; /* Prevents the items from wrapping to the next line */
 }
-  
 
 .mat-mdc-raised-button {
   border-radius: 25px !important;
@@ -41,26 +33,23 @@ iframe[seamless] {
 
 .video-container {
   position: relative;
-  padding-bottom: 18%; /* 16:9 ratio */
+  padding-bottom: 18%; /* 4:3 ratio */
   height: 0;
   overflow: hidden;
-  flex: 1 1 calc(25% - 20px); /* Four videos per row with gap */
-  max-width: calc(25% - 20px); /* Ensure the width does not exceed 25% minus the gap */
+  flex: 1 1 calc((80vw - 60px) / 4); /* Four videos per row with gap */
+  max-width: calc((80vw - 60px) / 4); /* Ensure the width does not exceed 80vw minus the gaps */
   background: #000;
 }
 
 .video-container iframe {
   position: absolute;
   top: -40%;
-  left: -35%;
+  left: -40%;
   width: 175%;
   height: 175%;
   filter: brightness(60%);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
 }
-
-
 
 .description {
   font-size: 1em;
@@ -71,7 +60,33 @@ iframe[seamless] {
   color: white;
 }
 
-
-#recent-projects{
+#recent-projects {
   text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .video-container {
+    flex: 1 1 calc((80vw - 40px) / 3); /* Three videos per row with gap */
+    max-width: calc((80vw - 40px) / 3);
+    min-height: 10vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .video-container {
+    flex: 1 1 calc((80vw - 20px) / 2); /* Two videos per row with gap */
+    max-width: calc((80vw - 20px) / 2);
+    min-height: 10vh;
+
+  }
+}
+
+@media (max-width: 600px) {
+  .video-container {
+    flex: 1 1 80vw; /* One video per row */
+    max-width: 80vw;
+    min-height: 25vh;
+
+  }
 }

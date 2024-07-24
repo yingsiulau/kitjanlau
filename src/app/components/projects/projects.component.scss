@@ -1,6 +1,4 @@
-.wrapper {
-  margin: 30px 10vw;
-}
+
 
 body {
   display: flex;
@@ -41,8 +39,8 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    grid-template-columns: repeat(2, calc(100% / 2 - 5px));
-    grid-template-rows: repeat(8, calc((80vw - 20px) / 2));
+    grid-template-columns: repeat(2, calc(100% / 2 - 10px));
+    grid-template-rows: repeat(8, calc((80vw - 30px) / 2));
   }
 
   .big {

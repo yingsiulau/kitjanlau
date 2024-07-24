@@ -13,8 +13,6 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 
 export class HomeComponent implements OnInit, AfterViewInit {
-  public currentScrollId: number = 2;
-  public lastId: number = 2;
   videos = [
     { id: 242936757, title:'text1' },
     { id: 241874417, title:'text2' },
@@ -66,16 +64,4 @@ export class HomeComponent implements OnInit, AfterViewInit {
   stopVideo(index: number): void {
     this.players[index].pause();
   }
-
-  public scroll(amount: number): void {
-    let nextId = this.currentScrollId + amount;
-    console.log(nextId);
-
-    if (nextId !== 1 && nextId !== 5) {
-      this.currentScrollId = this.currentScrollId + amount;
-      document.getElementById(this.currentScrollId.toString())?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    }
-  }
-
-
 }
