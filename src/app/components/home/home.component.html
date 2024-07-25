@@ -1,8 +1,6 @@
 <div class="wrapper">
   <div class="player">
-    <!--
-
-      <iframe
+    <iframe
       title="vimeo-player"
       src="https://player.vimeo.com/video/241874407?autoplay=1&muted=1"
       width="100%"
@@ -11,8 +9,7 @@
       allowfullscreen
       allow="autoplay"
       sandbox="allow-presentation allow-scripts allow-same-origin"
-      ></iframe>
-    -->
+    ></iframe>
   </div>
   <!--
 
@@ -70,26 +67,23 @@
   -->
 
   <h2 id="recent-projects">Recente Projekte</h2>
-  <!--
-    <div class="video-row">
-      /*
-      <div *ngFor="let video of videos; let i = index" class="video-container">
-        <iframe
-          #vimeoIframe
-          [src]="safeUrls[i]"
-          frameborder="0"
-          webkitallowfullscreen
-          mozallowfullscreen
-          allowfullscreen
-          sandbox="allow-presentation allow-scripts allow-same-origin"
-        ></iframe>
-        <div class="description" (mouseover)="playVideo(i)">
-          <h1>
-            {{ video.title }}
-          </h1>
-        </div>
+
+  <div class="video-row">
+    <div *ngFor="let video of videos; let i = index" class="video-container">
+      <iframe
+        #vimeoIframe
+        [src]="safeUrls[i]"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen
+        sandbox="allow-presentation allow-scripts allow-same-origin"
+      ></iframe>
+      <div class="description" (mouseover)="playVideo(i)">
+        <h1>
+          {{ video.title }}
+        </h1>
+      </div>
     </div>
   </div>
--->
-
 </div>

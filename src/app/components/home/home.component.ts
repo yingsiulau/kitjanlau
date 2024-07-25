@@ -30,15 +30,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor(private renderer: Renderer2, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
-    /*
     this.videos.forEach(video => {
       this.safeUrls.push(this.sanitizer.bypassSecurityTrustResourceUrl(`https://player.vimeo.com/video/${video.id}?autoplay=0&background=1&muted=1#t=5s`));
     });
-    */
   }
 
   ngAfterViewInit(): void {
-    /*
+    
     this.iframes.forEach((iframe, index) => {
       const player = new Player(iframe.nativeElement, {
         id: this.videos[index].id,
@@ -52,7 +50,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.renderer.listen(iframe.nativeElement, 'mouseleave', () => this.stopVideo(index));
 
     });
-    */
+    
   }
 
   playVideo(index: number): void {
